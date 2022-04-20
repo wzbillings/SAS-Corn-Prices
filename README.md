@@ -23,6 +23,10 @@ This project uses three separate data sources.
 2. NASA global yearly temperature anomaly data
 3. US presidential party by year dataset
 
+## Language
+
+Data cleaning and analysis will be performed using SAS v9.4. I do not own a SAS license, so I will be using [SAS on Demand for Academics](https://www.sas.com/en_us/software/on-demand-for-academics.html). 
+
 ## Licenses
 
 **Text and figures**: All prose and images are licensed under the [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) license](https://creativecommons.org/licenses/by-sa/4.0/).
