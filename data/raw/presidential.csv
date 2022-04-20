@@ -1,360 +1,174 @@
-﻿#[a],Portrait,Name (Birth–Death),Term,Party[b],Party[b]2,Election,Vice President
-#,Portrait,"Name
-(Birth–Death)",Term,Party,Party,Election,Vice President
-1,,"George Washington
-(1732–1799)","April 30, 1789
-–
-March 4, 1797",,Unaffiliated,1788–89,John Adams
-1,,"George Washington
-(1732–1799)","April 30, 1789
-–
-March 4, 1797",,Unaffiliated,1792,John Adams
-2,,"John Adams
-(1735–1826)","March 4, 1797
-–
-March 4, 1801",,Federalist,1796,Thomas Jefferson
-3,,"Thomas Jefferson
-(1743–1826)","March 4, 1801
-–
-March 4, 1809",,"Democratic-
-Republican",1800,Aaron Burr
-3,,"Thomas Jefferson
-(1743–1826)","March 4, 1801
-–
-March 4, 1809",,"Democratic-
-Republican",1804,George Clinton
-4,,"James Madison
-(1751–1836)","March 4, 1809
-–
-March 4, 1817",,"Democratic-
-Republican",1808,George Clinton
-4,,"James Madison
-(1751–1836)","March 4, 1809
-–
-March 4, 1817",,"Democratic-
-Republican",1808,"Vacant after
-Apr. 20, 1812"
-4,,"James Madison
-(1751–1836)","March 4, 1809
-–
-March 4, 1817",,"Democratic-
-Republican",1812,Elbridge Gerry
-4,,"James Madison
-(1751–1836)","March 4, 1809
-–
-March 4, 1817",,"Democratic-
-Republican",1812,"Vacant after
-Nov. 23, 1814"
-5,,"James Monroe
-(1758–1831)","March 4, 1817
-–
-March 4, 1825",,"Democratic-
-Republican",1816,Daniel D. Tompkins
-5,,"James Monroe
-(1758–1831)","March 4, 1817
-–
-March 4, 1825",,"Democratic-
-Republican",1820,Daniel D. Tompkins
-6,,"John Quincy Adams
-(1767–1848)","March 4, 1825
-–
-March 4, 1829",,"Democratic-
-Republican",1824,John C. Calhoun
-6,,"John Quincy Adams
-(1767–1848)","March 4, 1825
-–
-March 4, 1829",,National Republican,1824,John C. Calhoun
-7,,"Andrew Jackson
-(1767–1845)","March 4, 1829
-–
-March 4, 1837",,Democratic,1828,John C. Calhoun
-7,,"Andrew Jackson
-(1767–1845)","March 4, 1829
-–
-March 4, 1837",,Democratic,1828,"Vacant after
-Dec. 28, 1832"
-7,,"Andrew Jackson
-(1767–1845)","March 4, 1829
-–
-March 4, 1837",,Democratic,1832,Martin Van Buren
-8,,"Martin Van Buren
-(1782–1862)","March 4, 1837
-–
-March 4, 1841",,Democratic,1836,Richard Mentor Johnson
-9,,"William Henry Harrison
-(1773–1841)","March 4, 1841
-–
-April 4, 1841",,Whig,1840,John Tyler
-10,,"John Tyler
-(1790–1862)","April 4, 1841[i]
-–
-March 4, 1845",,Whig,1840,"Vacant throughout
-presidency"
-10,,"John Tyler
-(1790–1862)","April 4, 1841[i]
-–
-March 4, 1845",,Unaffiliated,1840,"Vacant throughout
-presidency"
-11,,"James K. Polk
-(1795–1849)","March 4, 1845
-–
-March 4, 1849",,Democratic,1844,George M. Dallas
-12,,"Zachary Taylor
-(1784–1850)","March 4, 1849
-–
-July 9, 1850",,Whig,1848,Millard Fillmore
-13,,"Millard Fillmore
-(1800–1874)","July 9, 1850
-–
-March 4, 1853",,Whig,1848,"Vacant throughout
-presidency"
-14,,"Franklin Pierce
-(1804–1869)","March 4, 1853
-–
-March 4, 1857",,Democratic,1852,William R. King
-14,,"Franklin Pierce
-(1804–1869)","March 4, 1853
-–
-March 4, 1857",,Democratic,1852,"Vacant after
-Apr. 18, 1853"
-15,,"James Buchanan
-(1791–1868)","March 4, 1857
-–
-March 4, 1861",,Democratic,1856,John C. Breckinridge
-16,,"Abraham Lincoln
-(1809–1865)","March 4, 1861
-–
-April 15, 1865",,Republican,1860,Hannibal Hamlin
-16,,"Abraham Lincoln
-(1809–1865)","March 4, 1861
-–
-April 15, 1865",,National Union,1864,Andrew Johnson
-17,,"Andrew Johnson
-(1808–1875)","April 15, 1865
-–
-March 4, 1869",,National Union,1864,"Vacant throughout
-presidency"
-17,,"Andrew Johnson
-(1808–1875)","April 15, 1865
-–
-March 4, 1869",,Democratic,1864,"Vacant throughout
-presidency"
-18,,"Ulysses S. Grant
-(1822–1885)","March 4, 1869
-–
-March 4, 1877",,Republican,1868,Schuyler Colfax
-18,,"Ulysses S. Grant
-(1822–1885)","March 4, 1869
-–
-March 4, 1877",,Republican,1872,Henry Wilson
-18,,"Ulysses S. Grant
-(1822–1885)","March 4, 1869
-–
-March 4, 1877",,Republican,1872,"Vacant after
-Nov. 22, 1875"
-19,,"Rutherford B. Hayes
-(1822–1893)","March 4, 1877
-–
-March 4, 1881",,Republican,1876,William A. Wheeler
-20,,"James A. Garfield
-(1831–1881)","March 4, 1881
-–
-September 19, 1881",,Republican,1880,Chester A. Arthur
-21,,"Chester A. Arthur
-(1829–1886)","September 19, 1881
-–
-March 4, 1885",,Republican,1880,"Vacant throughout
-presidency"
-22,,"Grover Cleveland
-(1837–1908)","March 4, 1885
-–
-March 4, 1889",,Democratic,1884,Thomas A. Hendricks
-22,,"Grover Cleveland
-(1837–1908)","March 4, 1885
-–
-March 4, 1889",,Democratic,1884,"Vacant after
-Nov. 25, 1885"
-23,,"Benjamin Harrison
-(1833–1901)","March 4, 1889
-–
-March 4, 1893",,Republican,1888,Levi P. Morton
-24,,"Grover Cleveland
-(1837–1908)","March 4, 1893
-–
-March 4, 1897",,Democratic,1892,Adlai Stevenson I
-25,,"William McKinley
-(1843–1901)","March 4, 1897
-–
-September 14, 1901",,Republican,1896,Garret Hobart
-25,,"William McKinley
-(1843–1901)","March 4, 1897
-–
-September 14, 1901",,Republican,1896,"Vacant after
-Nov. 21, 1899"
-25,,"William McKinley
-(1843–1901)","March 4, 1897
-–
-September 14, 1901",,Republican,1900,Theodore Roosevelt
-26,,"Theodore Roosevelt
-(1858–1919)","September 14, 1901
-–
-March 4, 1909",,Republican,1900,"Vacant through
-Mar. 4, 1905"
-26,,"Theodore Roosevelt
-(1858–1919)","September 14, 1901
-–
-March 4, 1909",,Republican,1904,Charles W. Fairbanks
-27,,"William Howard Taft
-(1857–1930)","March 4, 1909
-–
-March 4, 1913",,Republican,1908,James S. Sherman
-27,,"William Howard Taft
-(1857–1930)","March 4, 1909
-–
-March 4, 1913",,Republican,1908,"Vacant after
-Oct. 30, 1912"
-28,,"Woodrow Wilson
-(1856–1924)","March 4, 1913
-–
-March 4, 1921",,Democratic,1912,Thomas R. Marshall
-28,,"Woodrow Wilson
-(1856–1924)","March 4, 1913
-–
-March 4, 1921",,Democratic,1916,Thomas R. Marshall
-29,,"Warren G. Harding
-(1865–1923)","March 4, 1921
-–
-August 2, 1923",,Republican,1920,Calvin Coolidge
-30,,"Calvin Coolidge
-(1872–1933)","August 2, 1923
-–
-March 4, 1929",,Republican,1920,"Vacant through
-Mar. 4, 1925"
-30,,"Calvin Coolidge
-(1872–1933)","August 2, 1923
-–
-March 4, 1929",,Republican,1924,Charles G. Dawes
-31,,"Herbert Hoover
-(1874–1964)","March 4, 1929
-–
-March 4, 1933",,Republican,1928,Charles Curtis
-32,,"Franklin D. Roosevelt
-(1882–1945)","March 4, 1933
-–
-April 12, 1945",,Democratic,1932,John Nance Garner
-32,,"Franklin D. Roosevelt
-(1882–1945)","March 4, 1933
-–
-April 12, 1945",,Democratic,1936,John Nance Garner
-32,,"Franklin D. Roosevelt
-(1882–1945)","March 4, 1933
-–
-April 12, 1945",,Democratic,1940,Henry A. Wallace
-32,,"Franklin D. Roosevelt
-(1882–1945)","March 4, 1933
-–
-April 12, 1945",,Democratic,1944,Harry S. Truman
-33,,"Harry S. Truman
-(1884–1972)","April 12, 1945
-–
-January 20, 1953",,Democratic,1944,"Vacant through
-Jan. 20, 1949"
-33,,"Harry S. Truman
-(1884–1972)","April 12, 1945
-–
-January 20, 1953",,Democratic,1948,Alben W. Barkley
-34,,"Dwight D. Eisenhower
-(1890–1969)","January 20, 1953
-–
-January 20, 1961",,Republican,1952,Richard Nixon
-34,,"Dwight D. Eisenhower
-(1890–1969)","January 20, 1953
-–
-January 20, 1961",,Republican,1956,Richard Nixon
-35,,"John F. Kennedy
-(1917–1963)","January 20, 1961
-–
-November 22, 1963",,Democratic,1960,Lyndon B. Johnson
-36,,"Lyndon B. Johnson
-(1908–1973)","November 22, 1963
-–
-January 20, 1969",,Democratic,1960,"Vacant through
-Jan. 20, 1965"
-36,,"Lyndon B. Johnson
-(1908–1973)","November 22, 1963
-–
-January 20, 1969",,Democratic,1964,Hubert Humphrey
-37,,"Richard Nixon
-(1913–1994)","January 20, 1969
-–
-August 9, 1974",,Republican,1968,Spiro Agnew
-37,,"Richard Nixon
-(1913–1994)","January 20, 1969
-–
-August 9, 1974",,Republican,1972,Spiro Agnew
-37,,"Richard Nixon
-(1913–1994)","January 20, 1969
-–
-August 9, 1974",,Republican,1972,"Vacant, Oct. 10 – Dec. 6, 1973"
-37,,"Richard Nixon
-(1913–1994)","January 20, 1969
-–
-August 9, 1974",,Republican,1972,Gerald Ford
-38,,"Gerald Ford
-(1913–2006)","August 9, 1974
-–
-January 20, 1977",,Republican,1972,"Vacant through
-Dec. 19, 1974"
-38,,"Gerald Ford
-(1913–2006)","August 9, 1974
-–
-January 20, 1977",,Republican,1972,Nelson Rockefeller
-39,,"Jimmy Carter
-(b. 1924)","January 20, 1977
-–
-January 20, 1981",,Democratic,1976,Walter Mondale
-40,,"Ronald Reagan
-(1911–2004)","January 20, 1981
-–
-January 20, 1989",,Republican,1980,George H. W. Bush
-40,,"Ronald Reagan
-(1911–2004)","January 20, 1981
-–
-January 20, 1989",,Republican,1984,George H. W. Bush
-41,,"George H. W. Bush
-(1924–2018)","January 20, 1989
-–
-January 20, 1993",,Republican,1988,Dan Quayle
-42,,"Bill Clinton
-(b. 1946)","January 20, 1993
-–
-January 20, 2001",,Democratic,1992,Al Gore
-42,,"Bill Clinton
-(b. 1946)","January 20, 1993
-–
-January 20, 2001",,Democratic,1996,Al Gore
-43,,"George W. Bush
-(b. 1946)","January 20, 2001
-–
-January 20, 2009",,Republican,2000,Dick Cheney
-43,,"George W. Bush
-(b. 1946)","January 20, 2001
-–
-January 20, 2009",,Republican,2004,Dick Cheney
-44,,"Barack Obama
-(b. 1961)","January 20, 2009
-–
-January 20, 2017",,Democratic,2008,Joe Biden
-44,,"Barack Obama
-(b. 1961)","January 20, 2009
-–
-January 20, 2017",,Democratic,2012,Joe Biden
-45,,"Donald Trump
-(b. 1946)","January 20, 2017
-–
-January 20, 2021",,Republican,2016,Mike Pence
-46,,"Joe Biden
-(b. 1942)","January 20, 2021
-–
-Incumbent",,Democratic,2020,Kamala Harris
-Sources:,Sources:,Sources:,Sources:,Sources:,Sources:,Sources:,Sources:
+﻿#,Name,Party,Election
+1,"George Washington
+(1732–1799)",Unaffiliated,1788
+1,"George Washington
+(1732–1799)",Unaffiliated,1792
+2,"John Adams
+(1735–1826)",Federalist,1796
+3,"Thomas Jefferson
+(1743–1826)","Democratic-
+Republican",1800
+3,"Thomas Jefferson
+(1743–1826)","Democratic-
+Republican",1804
+4,"James Madison
+(1751–1836)","Democratic-
+Republican",1808
+4,"James Madison
+(1751–1836)","Democratic-
+Republican",1808
+4,"James Madison
+(1751–1836)","Democratic-
+Republican",1812
+4,"James Madison
+(1751–1836)","Democratic-
+Republican",1812
+5,"James Monroe
+(1758–1831)","Democratic-
+Republican",1816
+5,"James Monroe
+(1758–1831)","Democratic-
+Republican",1820
+6,"John Quincy Adams
+(1767–1848)","Democratic-
+Republican",1824
+6,"John Quincy Adams
+(1767–1848)",National Republican,1824
+7,"Andrew Jackson
+(1767–1845)",Democratic,1828
+7,"Andrew Jackson
+(1767–1845)",Democratic,1828
+7,"Andrew Jackson
+(1767–1845)",Democratic,1832
+8,"Martin Van Buren
+(1782–1862)",Democratic,1836
+9,"William Henry Harrison
+(1773–1841)",Whig,1840
+10,"John Tyler
+(1790–1862)",Whig,1840
+10,"John Tyler
+(1790–1862)",Unaffiliated,1840
+11,"James K. Polk
+(1795–1849)",Democratic,1844
+12,"Zachary Taylor
+(1784–1850)",Whig,1848
+13,"Millard Fillmore
+(1800–1874)",Whig,1848
+14,"Franklin Pierce
+(1804–1869)",Democratic,1852
+14,"Franklin Pierce
+(1804–1869)",Democratic,1852
+15,"James Buchanan
+(1791–1868)",Democratic,1856
+16,"Abraham Lincoln
+(1809–1865)",Republican,1860
+16,"Abraham Lincoln
+(1809–1865)",National Union,1864
+17,"Andrew Johnson
+(1808–1875)",National Union,1864
+17,"Andrew Johnson
+(1808–1875)",Democratic,1864
+18,"Ulysses S. Grant
+(1822–1885)",Republican,1868
+18,"Ulysses S. Grant
+(1822–1885)",Republican,1872
+18,"Ulysses S. Grant
+(1822–1885)",Republican,1872
+19,"Rutherford B. Hayes
+(1822–1893)",Republican,1876
+20,"James A. Garfield
+(1831–1881)",Republican,1880
+21,"Chester A. Arthur
+(1829–1886)",Republican,1880
+22,"Grover Cleveland
+(1837–1908)",Democratic,1884
+22,"Grover Cleveland
+(1837–1908)",Democratic,1884
+23,"Benjamin Harrison
+(1833–1901)",Republican,1888
+24,"Grover Cleveland
+(1837–1908)",Democratic,1892
+25,"William McKinley
+(1843–1901)",Republican,1896
+25,"William McKinley
+(1843–1901)",Republican,1896
+25,"William McKinley
+(1843–1901)",Republican,1900
+26,"Theodore Roosevelt
+(1858–1919)",Republican,1900
+26,"Theodore Roosevelt
+(1858–1919)",Republican,1904
+27,"William Howard Taft
+(1857–1930)",Republican,1908
+27,"William Howard Taft
+(1857–1930)",Republican,1908
+28,"Woodrow Wilson
+(1856–1924)",Democratic,1912
+28,"Woodrow Wilson
+(1856–1924)",Democratic,1916
+29,"Warren G. Harding
+(1865–1923)",Republican,1920
+30,"Calvin Coolidge
+(1872–1933)",Republican,1920
+30,"Calvin Coolidge
+(1872–1933)",Republican,1924
+31,"Herbert Hoover
+(1874–1964)",Republican,1928
+32,"Franklin D. Roosevelt
+(1882–1945)",Democratic,1932
+32,"Franklin D. Roosevelt
+(1882–1945)",Democratic,1936
+32,"Franklin D. Roosevelt
+(1882–1945)",Democratic,1940
+32,"Franklin D. Roosevelt
+(1882–1945)",Democratic,1944
+33,"Harry S. Truman
+(1884–1972)",Democratic,1944
+33,"Harry S. Truman
+(1884–1972)",Democratic,1948
+34,"Dwight D. Eisenhower
+(1890–1969)",Republican,1952
+34,"Dwight D. Eisenhower
+(1890–1969)",Republican,1956
+35,"John F. Kennedy
+(1917–1963)",Democratic,1960
+36,"Lyndon B. Johnson
+(1908–1973)",Democratic,1960
+36,"Lyndon B. Johnson
+(1908–1973)",Democratic,1964
+37,"Richard Nixon
+(1913–1994)",Republican,1968
+37,"Richard Nixon
+(1913–1994)",Republican,1972
+37,"Richard Nixon
+(1913–1994)",Republican,1972
+37,"Richard Nixon
+(1913–1994)",Republican,1972
+38,"Gerald Ford
+(1913–2006)",Republican,1972
+38,"Gerald Ford
+(1913–2006)",Republican,1972
+39,"Jimmy Carter
+(b. 1924)",Democratic,1976
+40,"Ronald Reagan
+(1911–2004)",Republican,1980
+40,"Ronald Reagan
+(1911–2004)",Republican,1984
+41,"George H. W. Bush
+(1924–2018)",Republican,1988
+42,"Bill Clinton
+(b. 1946)",Democratic,1992
+42,"Bill Clinton
+(b. 1946)",Democratic,1996
+43,"George W. Bush
+(b. 1946)",Republican,2000
+43,"George W. Bush
+(b. 1946)",Republican,2004
+44,"Barack Obama
+(b. 1961)",Democratic,2008
+44,"Barack Obama
+(b. 1961)",Democratic,2012
+45,"Donald Trump
+(b. 1946)",Republican,2016
+46,"Joe Biden
+(b. 1942)",Democratic,2020
