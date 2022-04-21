@@ -1,7 +1,7 @@
 # SAS-Grain-Prices
 Final project for BIOS 7400 with Xiao Song at the University of Georgia (USA), Spring 2022. Simple analysis in SAS v9.4 of grain price trends.
 
-![A high-resolution image of yellow corn on the cob.](figs/corn.jpg)
+<img src="figs/corn.jpg" height="250">
 
 *Image is sourced from [Wikimedia](https://commons.wikimedia.org/wiki/File:Corn_on_the_cob.jpg).*
 
