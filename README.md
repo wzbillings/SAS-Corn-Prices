@@ -5,6 +5,14 @@ Final project for BIOS 7400 with Xiao Song at the University of Georgia (USA), S
 
 *Image is sourced from [Wikimedia](https://commons.wikimedia.org/wiki/File:Corn_on_the_cob.jpg).*
 
+## File Structure
+- **code**: contains SAS code files used for cleaning and analyzing data.
+- **data**: contains all data used for this analysis.
+  - **SAS**: contains cleaned `.sas7bdat` dataset files.
+  - **raw**: contains raw text and Excel data downloaded from the internet.
+- **figs**: contains all images which will be displayed in either READMEs or the final paper.
+- **manuscript**: contains `.tex` and associated files which constitute the final paper.
+
 ## Objectives
 
 The goals for this project are as follows.
