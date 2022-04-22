@@ -17,9 +17,9 @@ Final project for BIOS 7400 with Xiao Song at the University of Georgia (USA), S
 
 The goals for this project are as follows.
 - [ ] Introduce the datasets and provide brief background on research questions of interest (write the introduction section).
-- [ ] Import the datasets and transform into the correct rectangular form for merging, if necessary. Name and label all variables.
-- [ ] Merge the datasets by year.
-- [ ] Manipulate, transform, and clean the merged dataset as necessary for analysis.
+- [x] Import the datasets and transform into the correct rectangular form for merging, if necessary. Name and label all variables.
+- [x] Merge the datasets by year.
+- [x] Manipulate, transform, and clean the merged dataset as necessary for analysis.
 - [ ] Justify the data management process (write the methods section).
 - [ ] Analyze the cleaned data to produce analytical results.
 - [ ] Produce figures and tables that are clear and meaningful.
