@@ -2,10 +2,10 @@
 *  TITLE :      SAS GRAIN PRICE PROJECT
 *                  
 *  DESCRIPTION: Final project for BIOS 7400 with Xiao Song, UGA, Spring 2022.
-*               Simple data cleaning and analysis of grain price data.
+*               Cleaning data for grain price analysis.
 *                                                                   
 *-------------------------------------------------------------------------------
-*  JOB NAME:    sas-grain-prices.SAS
+*  JOB NAME:    cleaning.SAS
 *  LANGUAGE:    SAS v9.4 (on demand for academics)
 *
 *  NAME:        Zane Billings
