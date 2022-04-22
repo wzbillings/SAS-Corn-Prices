@@ -33,7 +33,7 @@ This project uses three separate data sources.
 
 1. **USDA feed grains database**: can be accessed [on the USDA website](https://www.ers.usda.gov/data-products/feed-grains-database/). I downloaded all data from the database, which you can replicate using this [direct download link](https://www.ers.usda.gov/webdocs/DataFiles/50048/Feed%20Grains%20Yearbook%20Tables-All%20Years.xls?v=4138.8).
 2. **NASA land-ocean temperature index data**: can be accessed on [NASA's GISTEMP website](https://data.giss.nasa.gov/gistemp/). The direct download link is [here](https://data.giss.nasa.gov/gistemp/tabledata_v4/NH.Ts+dSST.txt).
-3. **US presidential party by year dataset**: I used Microsoft Excel's screen-scraping feature to download the data from the [list of presidents Wikipedia page](https://en.wikipedia.org/wiki/List_of_presidents_of_the_United_States) and saved the resulting table as a CSV file.
+3. **US presidential party by year dataset**: downloaded from [an article in The Guardian](https://www.theguardian.com/news/datablog/2012/oct/15/us-presidents-listed#data).
 
 ## Language
 
