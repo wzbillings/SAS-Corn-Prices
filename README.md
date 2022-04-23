@@ -21,8 +21,8 @@ The goals for this project are as follows.
 - [x] Merge the datasets by year.
 - [x] Manipulate, transform, and clean the merged dataset as necessary for analysis.
 - [ ] Justify the data management process (write the methods section).
-- [ ] Analyze the cleaned data to produce analytical results.
-- [ ] Produce figures and tables that are clear and meaningful.
+- [x] Analyze the cleaned data to produce analytical results.
+- [x] Produce figures and tables that are clear and meaningful.
 - [ ] Summarize the results of the analysis (write the results section).
 - [ ] Briefly interpret the results and connect to the research questions (write the discussion section).
 - [ ] Ensure all SAS code is documented and maintainable.
