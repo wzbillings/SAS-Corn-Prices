@@ -29,7 +29,7 @@ LIBNAME HOME '/home/u59465388/SAS-Grain-Prices';
 	them set to the min/max values in the dataset, but this allows for easier
 	changing than specifying the years manually.;
 %LET MINYEAR = 1866;
-%LET MAXYEAR = 2022;
+%LET MAXYEAR = 2021;
 
 * Variable for controlling whether the following macro prints to the report.
 	It is easier to toggle this in one place than to add or remove the macro
@@ -38,7 +38,7 @@ LIBNAME HOME '/home/u59465388/SAS-Grain-Prices';
 		portion as well.
 	Any other value (preferably 0): does not print (indeed, the macro will
 		not execute anything after the logical step).;
-%LET VERBOSE = 0;
+%LET VERBOSE = 1;
 %LET PRINTN = 10;
 
 * Macro for printing values and descriptor portion of data;
@@ -88,7 +88,7 @@ DATA TEMP;
 	* Give information labels to the variables;
 	LABEL
 		YEAR = "Calendar year"
-		TEMP = "Land-Ocean temperature index in degrees Celsius"
+		TEMP = "Temperature diff. (deg. C)"
 	;
 RUN;
 
@@ -104,12 +104,47 @@ DATA PRES;
 	INFILE PRESI DLM = ',' FIRSTOBS = 2;
 	INPUT YEAR PRES $ PARTY $;
 	
+	* Abraham Lincoln and Andrew Johnson are listed as 'National Union' party
+		members, but this isn't terribly useful. Historically, Abraham Lincoln
+		was a Republican and Andrew Johnson was a Democrat, and the National Union
+		coalition was a transitionary step. So I'll recode these two for simplicity.;
+	IF PRES = "Abraham Lincoln" THEN PARTY = "Republican";
+	ELSE IF PRES = "Andrew Johnson" THEN PARTY = "Democrat";
+	
 	* Add descriptive labels;
 	LABEL
 		YEAR = "Calendar year"
-		PRES = "President's name in given year"
-		PARTY = "Political party of President"
+		PRES = "President name"
+		PARTY = "President party"
 	;
+RUN;
+
+* The presidential data only goes through 2013, so we will have to manually
+	input the 2013 - 2022 data and append that to the end.;
+DATA PRES_END;
+	LENGTH YEAR 4 PRES $ 20 PARTY $ 25;
+	INPUT YEAR PRES $ PARTY $;
+	LABEL
+		YEAR = "Calendar year"
+		PRES = "President name"
+		PARTY = "President party"
+	;
+	INFILE DATALINES DSD DLM = " ";
+	DATALINES;
+2014 "Barack Obama" "Democrat"
+2015 "Barack Obama" "Democrat"
+2016 "Barack Obama" "Democrat"
+2017 "Donald Trump" "Republican"
+2018 "Donald Trump" "Republican"
+2019 "Donald Trump" "Republican"
+2020 "Donald Trump" "Republican"
+2021 "Joseph Biden" "Democrat"
+2022 "Joseph Biden" "Democrat"
+;
+RUN;
+
+* Now append the second dataset to the end of the first;
+PROC APPEND BASE = WORK.PRES DATA = WORK.PRES_END;
 RUN;
 
 %DESCRIBE(DAT = WORK.PRES);
@@ -128,9 +163,9 @@ DATA INFLATION;
 	* Assign descriptive lables;
 	LABEL
 		YEAR = 'Calendar year'
-		VALUE = 'Worth of $1 USD (1866) in current year'
-		INFL = 'Rate of inflation in calendar year'
-		PWR = 'Buying power of $1 USD (current year) relative to 1866'
+		VALUE = 'Adjusted value'
+		INFL = 'Rate of inflation'
+		PWR = 'Buying power'
 	;
 RUN;
 
@@ -188,6 +223,12 @@ DATA ALLGRNS;
 		ELSE _NUM{I} = INPUT(_CHA{I}, COMMA8.);
 	END;
 	
+	* Compute the percent change from the previous year;
+	PCT = ROUND(DIF(PCE) / LAG(PCE) * 100, 0.01);
+	
+	* Compute the log of the price;
+	LPE = LOG10(PCE);
+	
 	* Drop all of the temporary and placeholder variables that we don't need in
 		the cleaned dataset;
 	DROP TMP YR V1 - V6 I;
@@ -196,12 +237,14 @@ DATA ALLGRNS;
 	LABEL
 		GRN = "Grain commodity"
 		YEAR = "Calendar year"
-		ACR = "Planted commodity acerage (millions of acres)"
-		HVT = "Acerage of commodity harvested for grain (millions of acres)"
-		PRD = "Production of commodity (millions of bushels)"
-		YLD = "Yield of commodity per harvested acre (bushels per acre)"
-		PCE = "Weighted average farm price ($ USD per bushel)"
-		LNR = "Loan rate ($ USD per bushel)"
+		ACR = "Acerage (M)"
+		HVT = "Acres harvested (M)"
+		PRD = "Bushels produced (M)"
+		YLD = "Yield (bushels per acre)"
+		PCE = "Price per bushel"
+		LPE = "log10 price per bushel"
+		LNR = "Loan rate per bushel"
+		PCT = "Pct change in price"
 	;
 RUN;
 
@@ -241,6 +284,10 @@ DATA HOME.GRAINS;
 	MERGE ALLGRNS INFLATION PRES TEMP;
 	WHERE &MINYEAR <= YEAR <= &MAXYEAR;
 	BY YEAR;
+RUN;
+
+PROC SORT DATA = HOME.GRAINS;
+	BY GRN YEAR;
 RUN;
 
 %DESCRIBE(DAT = HOME.GRAINS);
