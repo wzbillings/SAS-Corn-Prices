@@ -180,8 +180,11 @@ RUN;
 FILENAME FDGRN '/home/u59465388/SAS-Grain-Prices/fg-sheet1.csv';
 
 DATA ALLGRNS;
-	* Import the CSV file;
-	INFILE FDGRN DLM = ',' DSD FIRSTOBS = 9 MISSOVER;
+	* Import the CSV file. The option DSD is necessary to read in consecutive
+		delimiters as missing data, and the MISSOVER option is necessary as
+		there are missing values at the end of lines, so the INPUT specification
+		should be interpreted strictly.;
+	INFILE FDGRN DLM = ',' FIRSTOBS = 9 DSD MISSOVER;
 	
 	* SAS doesn't like the missing values being denoted by ,, even with the DSD
 		option, and has a hard time parsing the numeric values. So, I'll import
