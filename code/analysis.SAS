@@ -21,7 +21,7 @@ OPTIONS NODATE LS=95 PS=42;
 
 LIBNAME HOME '/home/u59465388/SAS-Grain-Prices';
 
-ODS GRAPHICS / WIDTH = 6in HEIGHT = 6in;
+ODS GRAPHICS / WIDTH = 6in HEIGHT = 3in;
 
 *******************************************************************************;
 * Show the descriptor portion of the dataset;
@@ -56,6 +56,8 @@ PROC SGPANEL DATA = HOME.GRAINS;
 	SCATTER X = YEAR Y = LPE / GROUP = PARTY
 		MARKERATTRS = (SYMBOL = CIRCLEFILLED);
 RUN;
+
+ODS GRAPHICS / WIDTH = 6in HEIGHT = 6in;
 
 * Make a boxplot of log price vs. president's political party. This ignores the
 	time series information, but can tell us if either party has more high or
@@ -143,6 +145,13 @@ RUN;
 *******************************************************************************;
 
 TITLE2 "SIMPLE LINEAR REGRESSION MODELS";
+
+* Model stratified by grain only;
+PROC GLM DATA = HOME.GRAINS PLOTS = ALL;
+	CLASS GRN;
+	MODEL LPE = GRN / NOINT;
+RUN;
+
 * Write a macro to fit all regression models of the form
 		MODEL COVAR GRN COVAR * GRN
  	without having to type out all of the PROC GLM statements. This model will
@@ -150,7 +159,7 @@ TITLE2 "SIMPLE LINEAR REGRESSION MODELS";
  	diagnostic plots for the model.;
 
 %MACRO ALLSIMPLE(DAT = , RESP = , PRED = );
-	%LET N = %SYSFUNC(COUNTW(&DAT));
+	%LET N = %SYSFUNC(COUNTW(&PRED));
 	%DO I = 1 %TO &N;
 		PROC GLM DATA = &DAT PLOTS = ALL;
 			CLASS GRN;
@@ -171,7 +180,7 @@ TITLE2 "SIMPLE LINEAR REGRESSION MODELS";
 	correctly and I did it manually.;
 PROC GLM DATA = HOME.GRAINS PLOTS = ALL;
 	CLASS GRN PARTY;
-	MODEL LPE = GRN | PARTY;
+	MODEL LPE = GRN | PARTY / NOINT;
 RUN;
 
 TITLE2 "1866 FULL MODEL";
@@ -206,9 +215,9 @@ RUN;
 * Take the better fitting (by AIC) of the two previous models, and run a model
 	that can account for correlation using generalized least squares.
 	This model assumes exchangeable correlations between each of the time points.;
-
+TITLE2 "GENERALIZED LEAST SQUARES MODEL";
 PROC MIXED DATA = HOME.GRAINS PLOTS = ALL;
-	CLASS PARTY GRN;
+	CLASS GRN;
 	MODEL LPE = HVT PRD INFL PWR YEAR GRN GRN*HVT GRN*PRD /
 		NOINT SOLUTION CHISQ;
 	REPEATED;
@@ -235,29 +244,92 @@ RUN;
 PROC ARIMA DATA = TS_DAT;
 	IDENTIFY VAR = LPE NLAG = 30 SCAN STATIONARITY = (RW = 10);
 	BY GRN;
+	TITLE2 "ARIMA TESTS";
 RUN;
 
 * Next we use the ESTIMATE modeling stage. We fit several different ARIMA
 	models to the data in order to see which fits our time series the best,
 	and if any have white noise as the error term.;
+* One PROC ARIMA can contain multiple ESTIMATE statements, but I split these
+	into multiple PROC steps to make the output easier to read.;
+* We are basically fitting all of these models to get the AIC and see which is
+	the best fit.;
+
+* Model 1: AR(1);
 PROC ARIMA DATA = TS_DAT;
 	IDENTIFY VAR = LPE;
 	ESTIMATE P = 1;
-	ESTIMATE Q = 1;
-	ESTIMATE P = 1 Q = 1;
+	BY GRN;
+	TITLE2 "AR(1)";
+RUN;
+
+* MODEL 2: AR(2);
+PROC ARIMA DATA = TS_DAT;
+	IDENTIFY VAR = LPE;
 	ESTIMATE P = 2;
 	BY GRN;
+	TITLE2 "AR(2)";
+RUN;
+
+* MODEL 3: MA(1);
+PROC ARIMA DATA = TS_DAT;
+	IDENTIFY VAR = LPE;
+	ESTIMATE Q = 1;
+	BY GRN;
+	TITLE2 "MA(1)";
+RUN;
+
+* MODEL 4: ARMA(1, 1);
+PROC ARIMA DATA = TS_DAT;
+	IDENTIFY VAR = LPE;
+	ESTIMATE P = 1 Q = 1;
+	BY GRN;
+	TITLE2 "ARMA(1, 1)";
+RUN;
+
+* MODEL 5: ARIMA(1, 1, 0);
+PROC ARIMA DATA = TS_DAT;
+	IDENTIFY VAR = LPE(1);
+	ESTIMATE P = 1;
+	BY GRN;
+	TITLE2 "ARIMA(1, 1, 0)";
+RUN;
+
+* MODEL 6: ARIMA(1, 1, 1);
+PROC ARIMA DATA = TS_DAT;
+	IDENTIFY VAR = LPE(1);
+	ESTIMATE P = 1 Q = 1;
+	BY GRN;
+	TITLE2 "ARIMA(1, 1, 1)";
+RUN;
+
+* MODEL 7: ARIMA(0,0,0) (WHITE NOISE);
+PROC ARIMA DATA = TS_DAT;
+	IDENTIFY VAR = LPE;
+	ESTIMATE P = 0 Q = 0;
+	BY GRN;
+	TITLE2 "ARIMA(0, 0, 0)";
+RUN;
+
+* MODEL 8: ARIMA(0,1,0) (RANDOM WALK);
+PROC ARIMA DATA = TS_DAT;
+	IDENTIFY VAR = LPE(1);
+	ESTIMATE P = 0 Q = 0;
+	BY GRN;
+	TITLE2 "ARIMA(0, 1, 0)";
 RUN;
 
 * Finally, we use the best fitting model to make some simple forecasts in
 	the FORECAST modeling stage. We also identify outliers of the best
 	fitting model.;
+
 PROC ARIMA DATA = TS_DAT;
-	IDENTIFY VAR = LPE;
-	ESTIMATE P = 1;
+	IDENTIFY VAR = LPE(1);
+	ESTIMATE P = 1 Q = 1;
 	OUTLIER;
 	FORECAST LEAD = 10 INTERVAL = YEAR ID = T OUT = GRAIN_FC;
 	BY GRN;
+	TITLE2 "FORECASTING";
 RUN;
 	
 	
