@@ -58,8 +58,7 @@ the public GitHub page for this project:
 
 We used SAS version 9.4 (SAS Institute, Cary, NC) for all data management and
 statistical analyses. Specifically, we accessed SAS using the SAS on Demand for
-Academics SAS Studio platform. All four of the data sets listed in the previous
-system were imported into SAS.
+Academics SAS Studio platform.
 
 \subsubsection*{Feed grains data}
 
@@ -68,7 +67,7 @@ The main data set for our analysis was the
 	grains database}. The USDA collects data from across the United States on a
 monthly basis, and publicly distributes these data. The majority of the data
 are concerned with the four main feed crops discussed earlier. Although the
-complete feed grains database contains a lot of useful information, for our
+complete feed grains database contains a large amount of information, for our
 analysis we will limit ourselves to only one section of the data base: the
 ``U.S. acreage, production, yield, and farm price'' section. These data are
 collected on an annual basis and released in the USDA's feed yearbook.
@@ -77,8 +76,8 @@ acreage, production in bushels, yield of grain per harvested acre, and weighted
 farm average price were collected for corn, barley, and oats. The price of
 sorghum was additionally collected beginning in the 1919 fiscal year.
 
-While the other variables are mainly self-explanatory (referring to quantities
-reported by individual farmers and aggregated by the USDA), the weighted farm
+While the other variables are mainly self-explanatory (although details on
+detail collection are not provided by the USDA), the weighted farm
 average price is based on the monthly price recieved by farmers, weighted by
 the amount of grain put to market that month. The price does not take any other
 financial information into consideration, and is reported in USD per bushel.
@@ -167,7 +166,8 @@ the precision of the measurements. Again, we assigned descriptive labels.
 
 As the value of one USD has steadily decreased since 1866, we believe inflation
 is also an important predictor of price. We downloaded inflation data from
-\href{https://in2013dollars.com}{in2013dollars}, an online project which uses
+\textit{\href{https://in2013dollars.com}{in2013dollars}}, an online project
+which uses
 data from the United States Bureau of Labor Statistics and historical data to
 calculate the value of the U.S. dollar adjusted for inflation, going as far
 back as 1665. We set the inflation-adjusted USD value to be relative to 1866,
@@ -187,8 +187,8 @@ descriptive labels to all variables.
 Finally, as a personal curiosity, we were interested in whether American
 politics had a strong effect on feed grain prices over time. We downloaded a
 data set of presidential party by year from the publication
-\href{https://www.theguardian.com/news/datablog/2012/oct/15/us-presidents-listed#data}{The
-	Guardian} for convenience.
+\href{https://www.theguardian.com/news/datablog/2012/oct/15/us-presidents-listed#data}{\textit{The
+ Guardian}} for convenience.
 
 The Presidential data was easy to import using a \texttt{DATA} step, requiring
 no special or complicated manipulations like the previous data sets. However,
@@ -197,7 +197,8 @@ data set only went to 2013. So we used publicly available
 data to fill in the president names and political parties for the years
 2014--2022. Second, we recoded the party of two Presidents in the data set:
 Abraham Lincoln and Andrew Johnson ran on the National Union party ticket after
-the end of the American Civil War, but Abraham Lincoln is typically regarded as
+the end of the American Civil War, but Abraham Lincoln was historically
+registered as
 a republican and Andrew Johnson as a democrat. Recoding Andrew Johnson's
 political party allowed us to avoid having a small National Union subgroup with
 virtually no statistical power in our analyses. We assigned descriptive labels
@@ -376,9 +377,8 @@ the forecasting stage.
 	\caption{AIC values for various fitted ARIMA models. The ARIMA(1, 1, 1)
 	model appears to fit best for all grains. Note 	that the ARIMA(0, 1, 0)
 	model, which is equivalent to a random walk, fits essentially as well as
-	this model. Comparing the ARIMA models with the nondifferenced ARMA models
-	using AIC is not strictly appropriate, but we do so here for simplicity
-	with the constraints of the SAS procedure.}
+	this model. AIC is not easily comparable between ARIMA and nondifferenced
+	ARMA models, but we do so here for simplicity.}
 	\label{tab:ARIMA}
 \end{table}
 
@@ -391,8 +391,9 @@ fits the data very well. However, the generalized least squares regression
 analysis also suggests that several covariates may be useful in predicting
 grain prices, so a potential autoregressive component to the trend is not the
 only important source of information. The random walk model appeared to fit
-better than the best regression model, but the AICs are not truly comparable
-and a universal measure of goodness-of-fit such as $R^2$ or RMSE would be more
+better than the best ARIMA model, but worse than the regression models.
+However, the AICs are not truly comparable between models and a universal
+measure of goodness-of-fit such as $R^2$ or RMSE would be more
 appropriate. Building better regression models, or
 more sophisticated forecasting models, using these same data may be of interest
 in the future. We also recommend analysis of cross-correlation functions
