@@ -16,16 +16,16 @@ Final project for BIOS 7400 with Xiao Song at the University of Georgia (USA), S
 ## Objectives
 
 The goals for this project are as follows.
-- [ ] Introduce the datasets and provide brief background on research questions of interest (write the introduction section).
+- [x] Introduce the datasets and provide brief background on research questions of interest (write the introduction section).
 - [x] Import the datasets and transform into the correct rectangular form for merging, if necessary. Name and label all variables.
 - [x] Merge the datasets by year.
 - [x] Manipulate, transform, and clean the merged dataset as necessary for analysis.
-- [ ] Justify the data management process (write the methods section).
+- [x] Justify the data management process (write the methods section).
 - [x] Analyze the cleaned data to produce analytical results.
 - [x] Produce figures and tables that are clear and meaningful.
-- [ ] Summarize the results of the analysis (write the results section).
-- [ ] Briefly interpret the results and connect to the research questions (write the discussion section).
-- [ ] Ensure all SAS code is documented and maintainable.
+- [x] Summarize the results of the analysis (write the results section).
+- [x] Briefly interpret the results and connect to the research questions (write the discussion section).
+- [x] Ensure all SAS code is documented and maintainable.
 
 ## Data sources
 
